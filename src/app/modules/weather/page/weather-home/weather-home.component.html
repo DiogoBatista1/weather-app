@@ -1,1 +1,21 @@
-<p>weather-home works!</p>
+<div class="search">
+  <form #form="ngForm">
+    <input
+      type="text"
+      placeholder="Search Location"
+      name="city"
+      [(ngModel)]="initialCityName"
+    />
+
+    <span (click)="onSubmit()">
+      <fa-icon
+        animation="fade"
+        style="--fa-animation-duration: 5s; cursor: pointer"
+        size="lg"
+        class="search-icon"
+        [icon]="searchIcon"
+      ></fa-icon>
+    </span>
+  </form>
+</div>
+<app-weather-card *ngIf="weatherDatas" [weatherDatasInput]="weatherDatas"></app-weather-card>
