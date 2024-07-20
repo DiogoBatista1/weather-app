@@ -1,6 +1,7 @@
 # WeatherApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+![weather-app](https://github.com/user-attachments/assets/78b2b16b-2cfc-43df-a1fd-ae9c63543ec0)
 
 ## Development server
 
