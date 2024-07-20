@@ -1,1 +1,35 @@
-<p>weather-card works!</p>
+<div class="container" *ngIf="weatherDatasInput">
+  <div class="upper-data">
+    <img
+      src="../../../../../assets/sun.jpg"
+      *ngIf="weatherDatasInput.main.temp > 15"
+    />
+    <img
+      src="../../../../../assets/cold1.jpg"
+      *ngIf="weatherDatasInput.main.temp<=15"
+    />
+    <div class="weather-data">
+      <div class="location">
+        {{weatherDatasInput.name}}
+      </div>
+      <div class="temperature">
+        {{weatherDatasInput.main.temp | number:"1.0-0" }}º
+      </div>
+    </div>
+
+  </div>
+  <div class="lower-data">
+    <div class="more-info-label">More Informations</div>
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="minTemperatureIcon"></fa-icon>
+          <span>Min</span>
+        </div>
+        <div class="info-block-value">
+          {{weatherDatasInput.main.temp_min}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
